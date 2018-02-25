@@ -1,5 +1,8 @@
 package DataStructureFactory;
 
+import Queue.AQueue;
+import Queue.IQueue;
+import Queue.LQueue;
 import Stack.AStack;
 import Stack.IStack;
 import Stack.LStack;
@@ -34,6 +37,17 @@ public class DS_Factory {
           return new AStack( Integer.valueOf((String) jsonObject.get("length")));
       } else {
           return new LStack();
+      }
+  }
+
+  public IQueue getQueue(){
+      String type = (String) jsonObject.get("queue");
+      if(type.equals("unbounded")){
+          return new LQueue();
+      }else if(type.equals("bounded")){
+          return new AQueue(Integer.valueOf((String) jsonObject.get("length")));
+      }else {
+          return new LQueue();
       }
   }
 }

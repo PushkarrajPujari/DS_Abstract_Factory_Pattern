@@ -14,14 +14,9 @@ import Stack.LStack;
  */
 public class Main {
     public static void main(String[] args) {
-        DS_Factory ds_factory = new DS_Factory("C:\\Code\\CodeBase\\Local\\Java\\DesignPatterns\\Factory_Design\\Abstract_Factory\\DS_Abstract_Factory\\src\\main\\java\\Configuration\\Stack.json");
+        DS_Factory ds_factory = new DS_Factory("C:\\Code\\CodeBase\\Local\\Java\\DesignPatterns\\Factory_Design\\Abstract_Factory\\DS_Abstract_Factory\\src\\main\\java\\Configuration\\DataStructure.json");
         stackClient(ds_factory.getStack());
-
-        AQueue aQueue = new AQueue(10);
-        queueClient(aQueue);
-
-        LQueue lQueue = new LQueue();
-        queueClient(lQueue);
+        queueClient(ds_factory.getQueue());
     }
 
     private static void queueClient(IQueue queue) {
