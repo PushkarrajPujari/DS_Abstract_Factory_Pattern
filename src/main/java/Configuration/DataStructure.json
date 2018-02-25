@@ -1,5 +1,4 @@
 {
-  "stack":"bounded",
-  "queue":"unbounded",
+  "type":"unbounded",
   "length":"20"
 }
