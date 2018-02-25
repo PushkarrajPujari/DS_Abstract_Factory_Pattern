@@ -1,6 +1,9 @@
 package Start;
 
+import DataStructureFactory.BoundedDataStructureFactory;
 import DataStructureFactory.DS_Factory;
+import DataStructureFactory.IAbstractFactory;
+import DataStructureFactory.UnboundedDataStructureFactory;
 import Queue.AQueue;
 import Queue.IQueue;
 import Queue.LQueue;
@@ -14,9 +17,16 @@ import Stack.LStack;
  */
 public class Main {
     public static void main(String[] args) {
-        DS_Factory ds_factory = new DS_Factory("C:\\Code\\CodeBase\\Local\\Java\\DesignPatterns\\Factory_Design\\Abstract_Factory\\DS_Abstract_Factory\\src\\main\\java\\Configuration\\DataStructure.json");
+        /*DS_Factory ds_factory = new DS_Factory("C:\\Code\\CodeBase\\Local\\Java\\DesignPatterns\\Factory_Design\\Abstract_Factory\\DS_Abstract_Factory\\src\\main\\java\\Configuration\\DataStructure.json");
         stackClient(ds_factory.getStack());
-        queueClient(ds_factory.getQueue());
+        queueClient(ds_factory.getQueue());*/
+
+        IAbstractFactory iAbstractFactory = new BoundedDataStructureFactory(20);
+        stackClient(iAbstractFactory.getStack());
+        queueClient(iAbstractFactory.getQueue());
+        iAbstractFactory = new UnboundedDataStructureFactory();
+        stackClient(iAbstractFactory.getStack());
+        queueClient(iAbstractFactory.getQueue());
     }
 
     private static void queueClient(IQueue queue) {
