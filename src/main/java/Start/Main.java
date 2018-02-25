@@ -2,6 +2,7 @@ package main.java.Start;
 
 import main.java.Stack.AStack;
 import main.java.Stack.IStack;
+import main.java.Stack.LStack;
 
 /**
  * @author Pushkarraj
@@ -11,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         AStack aStack = new AStack(10);
         client(aStack);
+        LStack lStack = new LStack();
+        client(lStack);
     }
 
     public static void client(IStack stack){
