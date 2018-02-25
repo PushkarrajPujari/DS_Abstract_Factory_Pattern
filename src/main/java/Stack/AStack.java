@@ -3,16 +3,16 @@ package Stack;
  * @author Pushkarraj
  * @since 25-02-2018.
  */
-public class AStack implements IStack<Integer> {
-    private int [] stack ;
+public class AStack implements IStack {
+    private Object [] stack ;
     private int stackPointer;
 
     public AStack(int length){
-        stack = new int[length];
+        stack = new Object[length];
         stackPointer = stack.length;
     }
 
-    public Integer push(Integer v) {
+    public Object push(Object v) {
         if(stackPointer == 0){
             System.out.println("Stack Is Full");
         }else{
@@ -22,7 +22,7 @@ public class AStack implements IStack<Integer> {
         return null;
     }
 
-    public Integer pop() {
+    public Object pop() {
         if(stackPointer == stack.length){
             System.out.println("Stack Is Empty");
         }else {
