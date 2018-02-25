@@ -1,19 +1,19 @@
-package main.java.Stack;
+package Stack;
+
+import Stack.IStack;
 
 /**
  * @author Pushkarraj
  * @since 25-02-2018.
  */
-public class LStack implements IStack<Integer>{
+public class LStack implements IStack<Integer> {
     private Node head;
 
-    @Override
     public Integer push(Integer v) {
         head = new Node(v,head);
         return v;
     }
 
-    @Override
     public Integer pop() {
         if(head == null){
             System.out.println("Stack is empty");
@@ -25,7 +25,6 @@ public class LStack implements IStack<Integer>{
         }
     }
 
-    @Override
     public void print() {
         Node temp = head;
         System.out.println("******************** UnBounded Stack ***********************");

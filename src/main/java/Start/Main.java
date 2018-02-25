@@ -1,8 +1,9 @@
-package main.java.Start;
+package Start;
 
-import main.java.Stack.AStack;
-import main.java.Stack.IStack;
-import main.java.Stack.LStack;
+import DataStructureFactory.DS_Factory;
+import Stack.AStack;
+import Stack.IStack;
+import Stack.LStack;
 
 /**
  * @author Pushkarraj
@@ -10,10 +11,8 @@ import main.java.Stack.LStack;
  */
 public class Main {
     public static void main(String[] args) {
-        AStack aStack = new AStack(10);
-        client(aStack);
-        LStack lStack = new LStack();
-        client(lStack);
+        DS_Factory ds_factory = new DS_Factory("C:\\Code\\CodeBase\\Local\\Java\\DesignPatterns\\Factory_Design\\Abstract_Factory\\DS_Abstract_Factory\\src\\main\\java\\Configuration\\Stack.json");
+        client(ds_factory.getStack());
     }
 
     public static void client(IStack stack){

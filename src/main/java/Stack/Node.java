@@ -1,4 +1,4 @@
-package main.java.Stack;
+package Stack;
 
 /**
  * @author Pushkarraj

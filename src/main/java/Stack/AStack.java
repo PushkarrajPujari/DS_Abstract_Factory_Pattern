@@ -1,10 +1,9 @@
-package main.java.Stack;
-
+package Stack;
 /**
  * @author Pushkarraj
  * @since 25-02-2018.
  */
-public class AStack implements IStack<Integer>{
+public class AStack implements IStack<Integer> {
     private int [] stack ;
     private int stackPointer;
 
@@ -13,7 +12,6 @@ public class AStack implements IStack<Integer>{
         stackPointer = stack.length;
     }
 
-    @Override
     public Integer push(Integer v) {
         if(stackPointer == 0){
             System.out.println("Stack Is Full");
@@ -24,7 +22,6 @@ public class AStack implements IStack<Integer>{
         return null;
     }
 
-    @Override
     public Integer pop() {
         if(stackPointer == stack.length){
             System.out.println("Stack Is Empty");
@@ -34,7 +31,6 @@ public class AStack implements IStack<Integer>{
         return null;
     }
 
-    @Override
     public void print() {
         System.out.println("================ Bounded Stack =================");
         for(int i = stackPointer;i<stack.length;i++){
