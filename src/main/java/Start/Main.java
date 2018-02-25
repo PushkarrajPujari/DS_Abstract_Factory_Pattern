@@ -10,6 +10,8 @@ import Stack.IStack;
 /**
  * @author Pushkarraj
  * @since  25-02-2018.
+ *
+ * Yet to document this
  */
 public class Main {
     public static void main(String[] args) {
@@ -17,8 +19,6 @@ public class Main {
         IAbstractFactory iAbstractFactory = dataStructurefactory.getAbstractFactory();
         stackClient(iAbstractFactory.getStack());
         queueClient(iAbstractFactory.getQueue());
-
-
     }
 
     private static void queueClient(IQueue queue) {
